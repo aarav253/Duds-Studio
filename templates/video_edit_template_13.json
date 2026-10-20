@@ -1,0 +1,301 @@
+{
+ "name": "Main character / real show stealer -> focus (Edits4u, Naruto)",
+ "engine": "focus",
+ "reference": "references/template_13/reference.mp4",
+ "music": "music/template_13_ref.wav",
+ "size": [
+  1080,
+  1350
+ ],
+ "fps": 60,
+ "body_end": 18.84,
+ "outro": {
+  "card": 0.033,
+  "fade": 0.551,
+  "dark": 0.2
+ },
+ "fade_in": 0.25,
+ "notes": "Measured: main character with a glowing yellow caption bar that sweeps in (0-4.5), 3-panel manga split with a red glitch and red 'real show stealer' title (4.5-7.82), radial-blur zoom into the drop at 7.82, then focus shots cut on the beat (0.73 s, a few half beats) each opening with a radial zoom blur. Picture cuts already match the audio (within a frame). Opening vocal is part of the song (melodic, no words).",
+ "intro_sat": 1.0,
+ "intro_bright": 1.0,
+ "post_fx": "radial",
+ "post_bright": 1.0,
+ "split_glitch_frames": 14,
+ "split_tint_amt": 0.0,
+ "captions": [
+  {
+   "id": "main",
+   "text": "I'M THE MAIN CHARACTER OF NARUTO",
+   "a": 0.07,
+   "b": 4.5,
+   "sweep": 0.5,
+   "y": 0.62,
+   "font": "assets/fonts/Bangers.ttf",
+   "size": 0.058,
+   "max_w": 0.9,
+   "color": [
+    255,
+    238,
+    150
+   ],
+   "stroke": 0.004,
+   "stroke_color": [
+    70,
+    40,
+    0
+   ],
+   "stroke_alpha": 0.9,
+   "glow": 0.9,
+   "glow_color": [
+    255,
+    210,
+    40
+   ],
+   "band": {
+    "h": 0.06,
+    "blur": 0.012,
+    "alpha": 0.55,
+    "color": [
+     255,
+     205,
+     40
+    ]
+   }
+  },
+  {
+   "id": "split",
+   "text": "REAL SHOW STEALER OF\nNARUTO",
+   "a": 4.8,
+   "b": 7.82,
+   "fade_in": 0.2,
+   "y": 0.555,
+   "font": "C:/Windows/Fonts/bahnschrift.ttf",
+   "variation": "Bold",
+   "size": 0.052,
+   "color": [
+    235,
+    30,
+    45
+   ],
+   "stroke": 0.003,
+   "stroke_color": [
+    40,
+    0,
+    0
+   ],
+   "glow": 1.0,
+   "glow_color": [
+    255,
+    40,
+    50
+   ],
+   "glow_r": 0.015
+  }
+ ],
+ "segments": [
+  {
+   "a": 0.0,
+   "b": 4.5,
+   "kind": "intro",
+   "zoom": [
+    1.0,
+    1.05
+   ],
+   "bright": 1.0
+  },
+  {
+   "a": 4.5,
+   "b": 7.82,
+   "kind": "split"
+  },
+  {
+   "a": 7.82,
+   "b": 8.54,
+   "kind": "post",
+   "zoom": [
+    1.0,
+    1.05
+   ]
+  },
+  {
+   "a": 8.54,
+   "b": 9.2,
+   "kind": "post",
+   "zoom": [
+    1.0,
+    1.05
+   ]
+  },
+  {
+   "a": 9.2,
+   "b": 9.53,
+   "kind": "post",
+   "zoom": [
+    1.0,
+    1.05
+   ]
+  },
+  {
+   "a": 9.53,
+   "b": 9.77,
+   "kind": "post",
+   "zoom": [
+    1.0,
+    1.05
+   ]
+  },
+  {
+   "a": 9.77,
+   "b": 9.94,
+   "kind": "post",
+   "zoom": [
+    1.0,
+    1.05
+   ]
+  },
+  {
+   "a": 9.94,
+   "b": 10.17,
+   "kind": "post",
+   "zoom": [
+    1.0,
+    1.05
+   ]
+  },
+  {
+   "a": 10.17,
+   "b": 10.47,
+   "kind": "post",
+   "zoom": [
+    1.0,
+    1.05
+   ]
+  },
+  {
+   "a": 10.47,
+   "b": 10.9,
+   "kind": "post",
+   "zoom": [
+    1.0,
+    1.05
+   ]
+  },
+  {
+   "a": 10.9,
+   "b": 11.42,
+   "kind": "post",
+   "zoom": [
+    1.0,
+    1.05
+   ]
+  },
+  {
+   "a": 11.42,
+   "b": 11.8,
+   "kind": "post",
+   "zoom": [
+    1.0,
+    1.05
+   ]
+  },
+  {
+   "a": 11.8,
+   "b": 12.18,
+   "kind": "post",
+   "zoom": [
+    1.0,
+    1.05
+   ]
+  },
+  {
+   "a": 12.18,
+   "b": 12.9,
+   "kind": "post",
+   "zoom": [
+    1.0,
+    1.05
+   ]
+  },
+  {
+   "a": 12.9,
+   "b": 13.1,
+   "kind": "post",
+   "zoom": [
+    1.0,
+    1.05
+   ]
+  },
+  {
+   "a": 13.1,
+   "b": 13.65,
+   "kind": "post",
+   "zoom": [
+    1.0,
+    1.05
+   ]
+  },
+  {
+   "a": 13.65,
+   "b": 15.11,
+   "kind": "post",
+   "zoom": [
+    1.0,
+    1.05
+   ]
+  },
+  {
+   "a": 15.11,
+   "b": 15.49,
+   "kind": "post",
+   "zoom": [
+    1.0,
+    1.05
+   ]
+  },
+  {
+   "a": 15.49,
+   "b": 15.88,
+   "kind": "post",
+   "zoom": [
+    1.0,
+    1.05
+   ]
+  },
+  {
+   "a": 15.88,
+   "b": 16.63,
+   "kind": "post",
+   "zoom": [
+    1.0,
+    1.05
+   ]
+  },
+  {
+   "a": 16.63,
+   "b": 17.37,
+   "kind": "post",
+   "zoom": [
+    1.0,
+    1.05
+   ]
+  },
+  {
+   "a": 17.37,
+   "b": 18.1,
+   "kind": "post",
+   "zoom": [
+    1.0,
+    1.05
+   ]
+  },
+  {
+   "a": 18.1,
+   "b": 18.84,
+   "kind": "post",
+   "zoom": [
+    1.0,
+    1.05
+   ]
+  }
+ ]
+}

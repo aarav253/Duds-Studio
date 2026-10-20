@@ -1,0 +1,25 @@
+moviepy==1.0.3
+Pillow
+numpy<2
+imageio-ffmpeg==0.5.1
+google-api-python-client==2.149.0
+google-auth-oauthlib==1.2.1
+google-auth-httplib2==0.2.0
+PyYAML==6.0.2
+scenedetect
+pyttsx3
+edge-tts
+anthropic
+Flask
+requests
+# Imported directly by effects.py / assemble.py (beat/onset/drop detection, image ops)
+librosa==0.10.2.post1
+scipy
+opencv-python<4.11
+matplotlib
+# Neural music timing (music_analysis.py). Install CPU torch first:
+#   pip install torch==2.11.0 torchaudio==2.11.0 --index-url https://download.pytorch.org/whl/cpu
+torch==2.11.0
+torchaudio==2.11.0
+demucs==4.1.0
+beat-this==1.1.0

@@ -1,0 +1,384 @@
+{
+ "name": "No perfect ___ / reveal at the drop (GBX7 CapCut edit) - extended to the end of the first drop",
+ "engine": "reveal",
+ "reference": "references/template_11/reference.mp4",
+ "music": "music/template_11_song.wav",
+ "size": [
+  1080,
+  1350
+ ],
+ "fps": 60,
+ "duration": 24.78,
+ "drop": 8.243,
+ "notes": "Measured from the reference (30fps, 1080x1080): ~115 BPM. Before the drop: 4-beat shots (action / held push-in / held pan), a 0.43s flash shot, then a build shot that brightens ~1.8x. At the drop the build shot turns near-grey (sat 13) for one beat while the caption flips; then one shot per beat, muted (sat 37 vs 77 before), each pulling back 2-4%. Song has a sung vocal chop 5.8-8.7s (not dialogue) - keep it. Cut times are snapped to the song's beat grid - the reference's own picture cuts run ~0.15 s ahead of its audio (its video/audio are slightly out of sync), so copying them made our cuts early. Caption flip/grey beat sits on the strongest hit (8.243 s, the 'boom' before the drop) - user felt the flip on the full drop was too late; Barou shots start when the music opens up (8.815 s).",
+ "shots": [
+  {
+   "a": 0.0,
+   "b": 2.635,
+   "role": "pre",
+   "motion": "action",
+   "zoom": [
+    1.0,
+    1.03
+   ]
+  },
+  {
+   "a": 2.635,
+   "b": 4.68,
+   "role": "pre",
+   "motion": "push",
+   "zoom": [
+    1.0,
+    1.044
+   ]
+  },
+  {
+   "a": 4.68,
+   "b": 6.755,
+   "role": "pre",
+   "motion": "pan",
+   "zoom": [
+    1.02,
+    1.03
+   ],
+   "pan": [
+    0.0,
+    -0.025
+   ]
+  },
+  {
+   "a": 6.755,
+   "b": 7.29,
+   "role": "pre",
+   "motion": "flash",
+   "zoom": [
+    1.06,
+    1.0
+   ]
+  },
+  {
+   "a": 7.29,
+   "b": 8.815,
+   "role": "build",
+   "motion": "push",
+   "zoom": [
+    1.0,
+    1.08
+   ],
+   "bright_from": 7.29,
+   "bright_to": 8.203,
+   "bright_gain": 1.75
+  },
+  {
+   "a": 8.815,
+   "b": 9.33,
+   "role": "post",
+   "zoom": [
+    1.035,
+    1.0
+   ]
+  },
+  {
+   "a": 9.33,
+   "b": 9.845,
+   "role": "post",
+   "zoom": [
+    1.03,
+    1.0
+   ]
+  },
+  {
+   "a": 9.845,
+   "b": 10.36,
+   "role": "post",
+   "zoom": [
+    1.04,
+    1.0
+   ]
+  },
+  {
+   "a": 10.36,
+   "b": 10.875,
+   "role": "post",
+   "zoom": [
+    1.035,
+    1.0
+   ]
+  },
+  {
+   "a": 10.875,
+   "b": 11.39,
+   "role": "post",
+   "zoom": [
+    1.03,
+    1.0
+   ]
+  },
+  {
+   "a": 11.39,
+   "b": 11.905,
+   "role": "post",
+   "zoom": [
+    1.045,
+    1.0
+   ]
+  },
+  {
+   "a": 11.905,
+   "b": 12.42,
+   "role": "post",
+   "zoom": [
+    1.02,
+    1.0
+   ]
+  },
+  {
+   "a": 12.42,
+   "b": 12.935,
+   "role": "post",
+   "zoom": [
+    1.035,
+    1.0
+   ]
+  },
+  {
+   "a": 12.935,
+   "b": 13.45,
+   "role": "post",
+   "zoom": [
+    1.03,
+    1.0
+   ]
+  },
+  {
+   "a": 13.45,
+   "b": 13.965,
+   "role": "post",
+   "zoom": [
+    1.04,
+    1.0
+   ]
+  },
+  {
+   "a": 13.965,
+   "b": 14.48,
+   "role": "post",
+   "zoom": [
+    1.035,
+    1.0
+   ]
+  },
+  {
+   "a": 14.48,
+   "b": 14.995,
+   "role": "post",
+   "zoom": [
+    1.03,
+    1.0
+   ]
+  },
+  {
+   "a": 14.995,
+   "b": 15.51,
+   "role": "post",
+   "zoom": [
+    1.045,
+    1.0
+   ]
+  },
+  {
+   "a": 15.51,
+   "b": 16.025,
+   "role": "post",
+   "zoom": [
+    1.02,
+    1.0
+   ]
+  },
+  {
+   "a": 16.025,
+   "b": 16.54,
+   "role": "post",
+   "zoom": [
+    1.035,
+    1.0
+   ]
+  },
+  {
+   "a": 16.54,
+   "b": 17.055,
+   "role": "post",
+   "zoom": [
+    1.03,
+    1.0
+   ]
+  },
+  {
+   "a": 17.055,
+   "b": 17.57,
+   "role": "post",
+   "zoom": [
+    1.04,
+    1.0
+   ]
+  },
+  {
+   "a": 17.57,
+   "b": 18.085,
+   "role": "post",
+   "zoom": [
+    1.035,
+    1.0
+   ]
+  },
+  {
+   "a": 18.085,
+   "b": 18.6,
+   "role": "post",
+   "zoom": [
+    1.03,
+    1.0
+   ]
+  },
+  {
+   "a": 18.6,
+   "b": 19.115,
+   "role": "post",
+   "zoom": [
+    1.045,
+    1.0
+   ]
+  },
+  {
+   "a": 19.115,
+   "b": 19.63,
+   "role": "post",
+   "zoom": [
+    1.02,
+    1.0
+   ]
+  },
+  {
+   "a": 19.63,
+   "b": 20.145,
+   "role": "post",
+   "zoom": [
+    1.035,
+    1.0
+   ]
+  },
+  {
+   "a": 20.145,
+   "b": 20.66,
+   "role": "post",
+   "zoom": [
+    1.03,
+    1.0
+   ]
+  },
+  {
+   "a": 20.66,
+   "b": 21.175,
+   "role": "post",
+   "zoom": [
+    1.04,
+    1.0
+   ]
+  },
+  {
+   "a": 21.175,
+   "b": 21.69,
+   "role": "post",
+   "zoom": [
+    1.035,
+    1.0
+   ]
+  },
+  {
+   "a": 21.69,
+   "b": 22.205,
+   "role": "post",
+   "zoom": [
+    1.03,
+    1.0
+   ]
+  },
+  {
+   "a": 22.205,
+   "b": 22.72,
+   "role": "post",
+   "zoom": [
+    1.045,
+    1.0
+   ]
+  },
+  {
+   "a": 22.72,
+   "b": 23.235,
+   "role": "post",
+   "zoom": [
+    1.02,
+    1.0
+   ]
+  },
+  {
+   "a": 23.235,
+   "b": 23.75,
+   "role": "post",
+   "zoom": [
+    1.035,
+    1.0
+   ]
+  },
+  {
+   "a": 23.75,
+   "b": 24.265,
+   "role": "post",
+   "zoom": [
+    1.03,
+    1.0
+   ]
+  },
+  {
+   "a": 24.265,
+   "b": 24.78,
+   "role": "post",
+   "zoom": [
+    1.04,
+    1.0
+   ]
+  }
+ ],
+ "grade": {
+  "pre_sat": 1.0,
+  "drop_sat": 0.18,
+  "post_sat": 0.5,
+  "post_lift": 1.12,
+  "post_warm": [
+   1.03,
+   0.99,
+   0.97
+  ]
+ },
+ "caption": {
+  "font": "C:/Windows/Fonts/arial.ttf",
+  "size": 58,
+  "y": 0.5,
+  "stroke": 3,
+  "line_gap": 1.02,
+  "pre": "“there’s no perfect\nstriker”",
+  "post": "brutal."
+ },
+ "beat": {
+  "t0": 0.06,
+  "period": 0.515
+ },
+ "song_source": {
+  "file": "music/roomlost/roomlost_slowed.wav",
+  "title": "LXSTFFACE - MONTAGEM ROOMLOST (Slowed)",
+  "offset_s": 0.01261,
+  "gain": 1.0036,
+  "note": "edit time t = song time t + 0.01261 s, 1.0x speed; matched by onset + sample cross-correlation (0.98-0.996), no drift"
+ },
+ "bars": "bars start on beats k = 1, 5, 9 ... (0.575, 2.635, 4.695, 6.755, 8.815 ...): the song's phrase is one beat off a grid starting at 0.06"
+}

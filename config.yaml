@@ -1,0 +1,51 @@
+output:
+  width: 1080
+  height: 1920          # standard 9:16 vertical; manga_hype_edit is the ONE type that ignores
+                        # this and reads its own width/height from the manifest instead
+  fps: 30
+  max_duration_seconds: 60   # YouTube Shorts ceiling
+
+branding:
+  intro_text: "Duds"                # burned into ~first 1s of edit/meme (full-screen centered);
+                                    # narration/manga_edit types use a small corner watermark instead
+  intro_duration_seconds: 1.0
+  cta_text: "Follow for more"       # burned in near the end as a subscribe nudge
+  cta_duration_seconds: 2.5
+
+audio:
+  original_clip_volume: 0.6         # default for non-narration types
+  music_volume: 0.35
+
+content_types:
+  meme:
+    caption_fontsize: 80
+    caption_position_frac: 0.5      # 0=top, 1=bottom
+    music_volume: 0.3
+  narration:
+    caption_fontsize: 62
+    caption_position_frac: 0.62
+    words_per_chunk: 4              # caption chunk size (word-count based, not fixed-interval)
+    tts_rate: 165
+    original_clip_volume: 0.15      # ducked low since voiceover is the point
+    voiceover_volume: 1.0
+    background_music_volume: 0.12
+    hook_words: 10                  # opening N words get bigger/brighter "hook" treatment
+    hook_fontsize: 76
+    hook_color: "#ffe066"
+    caption_backdrop_alpha: 150     # semi-transparent bar behind captions
+    caption_lead_seconds: 0.15      # every caption appears this much BEFORE its exact timestamp
+    watermark_fontsize: 34
+
+clip_selection:                     # used by generate_manifests.py's scene-cut auto-picker
+  min_clip_seconds: 8
+  max_clip_seconds: 45
+  clips_per_episode: 3
+
+music_selection:
+  include_in_narration: false       # narration usually doesn't need a music bed under the voice
+
+youtube:
+  category_id: "24"                 # Entertainment (manifest can override with "category_id")
+  default_tags: ["shorts", "facts", "didyouknow"]   # fallback only
+  privacy_on_upload: "private"      # NEVER change this - upload.py refuses to run otherwise
+  made_for_kids: false

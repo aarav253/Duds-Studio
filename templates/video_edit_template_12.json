@@ -1,0 +1,286 @@
+{
+ "name": "Everyone reacting to... -> focus (Aeko, Hajime Kashimo edit)",
+ "engine": "focus",
+ "reference": "references/template_12/reference.mp4",
+ "music": "music/template_12_ref.wav",
+ "song": "Dead Inside (Sped Up)",
+ "size": [
+  1080,
+  1350
+ ],
+ "fps": 60,
+ "body_end": 11.68,
+ "outro": {
+  "card": 0.033,
+  "fade": 0.551,
+  "dark": 0.2
+ },
+ "notes": "Measured: captioned intro of 5 reaction shots (0-3.58), a long look-up shot, a darkened grin with the focus character growing in a box (5.12-5.52), inverted flash on the drop (5.52) then one tinted shot per beat (0.385 s) with an inverted/white flash on every cut; last shot dissolves into white. Cuts snapped to the song's beats (the reference picture runs ~0.05 s early).",
+ "intro_sat": 0.75,
+ "intro_bright": 0.8,
+ "post_fx": "invert",
+ "tint": [
+  150,
+  70,
+  235
+ ],
+ "tint_amt": 0.75,
+ "glow": 0.35,
+ "popup": {
+  "a": 5.12,
+  "b": 5.52,
+  "grow": 0.3,
+  "w0": 0.04,
+  "w1": 0.42,
+  "x": 0.5,
+  "y": 0.55,
+  "drift": 0.05
+ },
+ "captions": [
+  {
+   "id": "intro",
+   "text": "EVERYONE REACTING TO\nGOJO'S DEATH...",
+   "a": 0.0,
+   "b": 3.58,
+   "y": 0.43,
+   "font": "C:/Windows/Fonts/bahnschrift.ttf",
+   "variation": "Bold Condensed",
+   "size": 0.06,
+   "line_gap": 1.05,
+   "color": [
+    250,
+    250,
+    250
+   ],
+   "stroke": 0.003,
+   "stroke_alpha": 0.7
+  }
+ ],
+ "segments": [
+  {
+   "a": 0.0,
+   "b": 0.9,
+   "kind": "intro",
+   "zoom": [
+    1.0,
+    1.05
+   ]
+  },
+  {
+   "a": 0.9,
+   "b": 1.44,
+   "kind": "intro",
+   "zoom": [
+    1.0,
+    1.05
+   ]
+  },
+  {
+   "a": 1.44,
+   "b": 2.41,
+   "kind": "intro",
+   "zoom": [
+    1.0,
+    1.05
+   ]
+  },
+  {
+   "a": 2.41,
+   "b": 3.2,
+   "kind": "intro",
+   "zoom": [
+    1.0,
+    1.05
+   ]
+  },
+  {
+   "a": 3.2,
+   "b": 3.58,
+   "kind": "intro",
+   "zoom": [
+    1.0,
+    1.05
+   ]
+  },
+  {
+   "a": 3.58,
+   "b": 4.74,
+   "kind": "intro",
+   "zoom": [
+    1.0,
+    1.08
+   ]
+  },
+  {
+   "a": 4.74,
+   "b": 5.52,
+   "kind": "intro",
+   "zoom": [
+    1.0,
+    1.05
+   ],
+   "bright": 0.45
+  },
+  {
+   "a": 5.52,
+   "b": 5.9,
+   "kind": "post",
+   "zoom": [
+    1.06,
+    1.0
+   ],
+   "shake": false
+  },
+  {
+   "a": 5.9,
+   "b": 6.28,
+   "kind": "post",
+   "zoom": [
+    1.06,
+    1.0
+   ],
+   "shake": true
+  },
+  {
+   "a": 6.28,
+   "b": 6.68,
+   "kind": "post",
+   "zoom": [
+    1.06,
+    1.0
+   ],
+   "shake": false
+  },
+  {
+   "a": 6.68,
+   "b": 7.06,
+   "kind": "post",
+   "zoom": [
+    1.06,
+    1.0
+   ],
+   "shake": false
+  },
+  {
+   "a": 7.06,
+   "b": 7.44,
+   "kind": "post",
+   "zoom": [
+    1.06,
+    1.0
+   ],
+   "shake": false
+  },
+  {
+   "a": 7.44,
+   "b": 7.84,
+   "kind": "post",
+   "zoom": [
+    1.06,
+    1.0
+   ],
+   "shake": true
+  },
+  {
+   "a": 7.84,
+   "b": 8.22,
+   "kind": "post",
+   "zoom": [
+    1.06,
+    1.0
+   ],
+   "shake": false
+  },
+  {
+   "a": 8.22,
+   "b": 8.6,
+   "kind": "post",
+   "zoom": [
+    1.06,
+    1.0
+   ],
+   "shake": false
+  },
+  {
+   "a": 8.6,
+   "b": 8.98,
+   "kind": "post",
+   "zoom": [
+    1.06,
+    1.0
+   ],
+   "shake": false
+  },
+  {
+   "a": 8.98,
+   "b": 9.38,
+   "kind": "post",
+   "zoom": [
+    1.06,
+    1.0
+   ],
+   "shake": true
+  },
+  {
+   "a": 9.38,
+   "b": 9.76,
+   "kind": "post",
+   "zoom": [
+    1.06,
+    1.0
+   ],
+   "shake": false
+  },
+  {
+   "a": 9.76,
+   "b": 10.14,
+   "kind": "post",
+   "zoom": [
+    1.06,
+    1.0
+   ],
+   "shake": false
+  },
+  {
+   "a": 10.14,
+   "b": 10.52,
+   "kind": "post",
+   "zoom": [
+    1.06,
+    1.0
+   ],
+   "shake": false
+  },
+  {
+   "a": 10.52,
+   "b": 10.92,
+   "kind": "post",
+   "zoom": [
+    1.06,
+    1.0
+   ],
+   "shake": true
+  },
+  {
+   "a": 10.92,
+   "b": 11.3,
+   "kind": "post",
+   "zoom": [
+    1.06,
+    1.0
+   ],
+   "shake": false
+  },
+  {
+   "a": 11.3,
+   "b": 11.68,
+   "kind": "post",
+   "zoom": [
+    1.06,
+    1.0
+   ],
+   "shake": false,
+   "end_blur": true
+  }
+ ]
+}

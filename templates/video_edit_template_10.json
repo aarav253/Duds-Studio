@@ -1,0 +1,767 @@
+{
+ "name": "Seven Deadly Sins (ORAN EDITS)",
+ "engine": "sins",
+ "reference": "references/template_10/reference.mp4",
+ "ref_fps": 30,
+ "ref_size": [
+  1080,
+  1080
+ ],
+ "size": [
+  1080,
+  1350
+ ],
+ "fps": 60,
+ "length": 1385,
+ "audio": {
+  "mix": "music/template_10_mix.wav",
+  "loop": 5.2005,
+  "song": "music/template_10_song.wav",
+  "song_source": {
+   "file": "music/HEAZY - TENI TENI (SLOWED).mp3",
+   "offset_s": 26.70207,
+   "gain": 0.527,
+   "note": "edit = song[26.70207 : 26.70207+46.25] at 1.0x, -5.6 dB; aligned by cross-correlation, drift < 0.1 ms"
+  }
+ },
+ "fonts": {
+  "name": "assets/fonts/Michroma.ttf",
+  "sin": "assets/fonts/Orbitron.ttf",
+  "title": "assets/fonts/Bangers.ttf"
+ },
+ "notes": "Frames are reference frames @30fps (1080x1080). Shots cut on the beat (~19.5f). First half holds still (clip motion only); Gluttony/Wrath/Greed push in ~20%/s. White dips into the interlude, Gluttony and Wrath. Voicelines lifted from this reference were deleted (2026-10-12) - use the clean per-character sets in panels/Blue Lock/<Character>/voicelines/.",
+ "sections": [
+  {
+   "id": "title",
+   "cuts": [
+    0,
+    17,
+    62,
+    67,
+    84,
+    100
+   ],
+   "end": 137,
+   "zoom": 0.0,
+   "grade": {
+    "amount": 0.0,
+    "p": [
+     6,
+     44,
+     189
+    ]
+   },
+   "text": [
+    {
+     "role": "name",
+     "text": "BLUE LOCK CHARACTERS",
+     "box": [
+      88,
+      397,
+      993,
+      440
+     ],
+     "color": [
+      255,
+      255,
+      255
+     ]
+    },
+    {
+     "role": "title",
+     "text": "SEVEN DEADLY SINS",
+     "box": [
+      154,
+      489,
+      925,
+      574
+     ],
+     "color": [
+      226,
+      54,
+      81
+     ]
+    },
+    {
+     "role": "name",
+     "text": "AS THE",
+     "box": [
+      451,
+      606,
+      618,
+      641
+     ],
+     "color": [
+      255,
+      255,
+      255
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pride",
+   "cuts": [
+    137,
+    156,
+    177,
+    196,
+    214,
+    235,
+    253,
+    273
+   ],
+   "end": 292,
+   "zoom": 0.0,
+   "grade": {
+    "amount": 0.85,
+    "lo": [
+     2,
+     11,
+     46
+    ],
+    "mid": [
+     33,
+     106,
+     152
+    ],
+    "hi": [
+     244,
+     250,
+     251
+    ],
+    "p": [
+     14,
+     95,
+     248
+    ]
+   },
+   "text": [
+    {
+     "role": "name",
+     "text": "MICHEAL KAISER",
+     "box": [
+      211,
+      436,
+      836,
+      482
+     ],
+     "color": [
+      255,
+      255,
+      255
+     ]
+    },
+    {
+     "role": "sin",
+     "text": "PRIDE",
+     "box": [
+      315,
+      508,
+      756,
+      579
+     ],
+     "color": [
+      86,
+      236,
+      226
+     ]
+    },
+    {
+     "role": "name",
+     "text": "GODS CHOSEN EMPEROR",
+     "box": [
+      126,
+      613,
+      900,
+      650
+     ],
+     "color": [
+      255,
+      255,
+      255
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sloth",
+   "cuts": [
+    292,
+    312,
+    331,
+    351,
+    371,
+    392,
+    410,
+    431
+   ],
+   "end": 450,
+   "zoom": 0.0,
+   "grade": {
+    "amount": 0.85,
+    "lo": [
+     58,
+     84,
+     84
+    ],
+    "mid": [
+     195,
+     209,
+     210
+    ],
+    "hi": [
+     252,
+     251,
+     253
+    ],
+    "p": [
+     63,
+     202,
+     252
+    ]
+   },
+   "text": [
+    {
+     "role": "name",
+     "text": "NAGI SEISHIRO",
+     "box": [
+      204,
+      422,
+      854,
+      470
+     ],
+     "color": [
+      255,
+      255,
+      255
+     ]
+    },
+    {
+     "role": "sin",
+     "text": "SLOTH",
+     "box": [
+      301,
+      506,
+      769,
+      579
+     ],
+     "color": [
+      253,
+      252,
+      255
+     ]
+    },
+    {
+     "role": "name",
+     "text": "THE LAZY GENIUS",
+     "box": [
+      148,
+      608,
+      898,
+      653
+     ],
+     "color": [
+      255,
+      255,
+      255
+     ]
+    }
+   ]
+  },
+  {
+   "id": "envy",
+   "cuts": [
+    450,
+    471,
+    490,
+    509,
+    528,
+    548,
+    570,
+    587
+   ],
+   "end": 606,
+   "zoom": 0.0,
+   "grade": {
+    "amount": 0.2,
+    "lo": [
+     16,
+     12,
+     21
+    ],
+    "mid": [
+     39,
+     41,
+     53
+    ],
+    "hi": [
+     233,
+     224,
+     222
+    ],
+    "p": [
+     12,
+     44,
+     227
+    ]
+   },
+   "text": [
+    {
+     "role": "name",
+     "text": "YUKIMA KENYU",
+     "box": [
+      252,
+      419,
+      828,
+      466
+     ],
+     "color": [
+      255,
+      255,
+      255
+     ]
+    },
+    {
+     "role": "sin",
+     "text": "ENVY",
+     "box": [
+      290,
+      497,
+      778,
+      592
+     ],
+     "color": [
+      248,
+      222,
+      90
+     ]
+    },
+    {
+     "role": "name",
+     "text": "1 ON 1 EMPEROR",
+     "box": [
+      220,
+      630,
+      827,
+      677
+     ],
+     "color": [
+      255,
+      255,
+      255
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lust",
+   "cuts": [
+    606,
+    627,
+    647,
+    665,
+    686,
+    705,
+    724,
+    743
+   ],
+   "end": 761,
+   "zoom": 0.0,
+   "grade": {
+    "amount": 0.6,
+    "lo": [
+     17,
+     15,
+     19
+    ],
+    "mid": [
+     115,
+     55,
+     71
+    ],
+    "hi": [
+     246,
+     225,
+     228
+    ],
+    "p": [
+     9,
+     81,
+     226
+    ]
+   },
+   "text": [
+    {
+     "role": "name",
+     "text": "SHIDOU RYUSEI",
+     "box": [
+      241,
+      390,
+      840,
+      438
+     ],
+     "color": [
+      255,
+      255,
+      255
+     ]
+    },
+    {
+     "role": "sin",
+     "text": "LUST",
+     "box": [
+      337,
+      481,
+      735,
+      553
+     ],
+     "color": [
+      236,
+      40,
+      156
+     ]
+    },
+    {
+     "role": "name",
+     "text": "THE ZESTY DEMON",
+     "box": [
+      201,
+      607,
+      880,
+      649
+     ],
+     "color": [
+      255,
+      255,
+      255
+     ]
+    }
+   ]
+  },
+  {
+   "id": "interlude",
+   "cuts": [
+    761,
+    839
+   ],
+   "end": 917,
+   "zoom": 0.03,
+   "white_in": 18,
+   "white_out": 5,
+   "grade": {
+    "amount": 0.0,
+    "p": [
+     12,
+     62,
+     170
+    ]
+   },
+   "subtitles": [
+    {
+     "text": "KEEP",
+     "a": 808,
+     "b": 820
+    },
+    {
+     "text": "PLAYING",
+     "a": 820,
+     "b": 832
+    },
+    {
+     "text": "CRAZY",
+     "a": 832,
+     "b": 838
+    },
+    {
+     "text": "CRAZY SOCCER",
+     "a": 838,
+     "b": 854
+    },
+    {
+     "text": "CRAZY SOCCER",
+     "a": 856,
+     "b": 868
+    },
+    {
+     "text": "YOU",
+     "a": 868,
+     "b": 880
+    },
+    {
+     "text": "DAMN",
+     "a": 880,
+     "b": 892
+    },
+    {
+     "text": "GENIUSES",
+     "a": 892,
+     "b": 912
+    }
+   ],
+   "subtitle_box": [
+    0,
+    560,
+    1080,
+    630
+   ]
+  },
+  {
+   "id": "gluttony",
+   "cuts": [
+    917,
+    936,
+    957,
+    976,
+    995,
+    1015,
+    1035,
+    1055
+   ],
+   "end": 1073,
+   "zoom": 0.19,
+   "white_in": 5,
+   "white_out": 5,
+   "grade": {
+    "amount": 0.75,
+    "lo": [
+     12,
+     10,
+     26
+    ],
+    "mid": [
+     69,
+     75,
+     135
+    ],
+    "hi": [
+     214,
+     234,
+     241
+    ],
+    "p": [
+     9,
+     94,
+     223
+    ]
+   },
+   "text": [
+    {
+     "role": "name",
+     "text": "ISAGI YOICHI",
+     "box": [
+      262,
+      425,
+      819,
+      474
+     ],
+     "color": [
+      255,
+      255,
+      255
+     ]
+    },
+    {
+     "role": "sin",
+     "text": "GLUTTONY",
+     "box": [
+      177,
+      507,
+      895,
+      578
+     ],
+     "color": [
+      72,
+      41,
+      243
+     ]
+    },
+    {
+     "role": "name",
+     "text": "THE DEMON KING",
+     "box": [
+      173,
+      618,
+      873,
+      666
+     ],
+     "color": [
+      255,
+      255,
+      255
+     ]
+    }
+   ]
+  },
+  {
+   "id": "wrath",
+   "cuts": [
+    1073,
+    1093,
+    1112,
+    1132,
+    1152,
+    1171,
+    1191,
+    1210
+   ],
+   "end": 1250,
+   "zoom": 0.19,
+   "white_in": 4,
+   "grade": {
+    "amount": 0.9,
+    "lo": [
+     24,
+     6,
+     18
+    ],
+    "mid": [
+     93,
+     16,
+     38
+    ],
+    "hi": [
+     177,
+     141,
+     171
+    ],
+    "p": [
+     11,
+     50,
+     152
+    ]
+   },
+   "text": [
+    {
+     "role": "name",
+     "text": "BAROU SHOEI",
+     "box": [
+      320,
+      394,
+      809,
+      428
+     ],
+     "color": [
+      255,
+      255,
+      255
+     ]
+    },
+    {
+     "role": "sin",
+     "text": "WRATH",
+     "box": [
+      272,
+      456,
+      836,
+      548
+     ],
+     "color": [
+      226,
+      38,
+      62
+     ]
+    },
+    {
+     "role": "name",
+     "text": "THE KING",
+     "box": [
+      298,
+      577,
+      787,
+      611
+     ],
+     "color": [
+      255,
+      255,
+      255
+     ]
+    }
+   ]
+  },
+  {
+   "id": "greed",
+   "cuts": [
+    1250,
+    1268,
+    1288,
+    1308,
+    1327,
+    1347,
+    1366
+   ],
+   "end": 1385,
+   "zoom": 0.19,
+   "grade": {
+    "amount": 0.7,
+    "lo": [
+     3,
+     7,
+     13
+    ],
+    "mid": [
+     24,
+     56,
+     63
+    ],
+    "hi": [
+     178,
+     231,
+     231
+    ],
+    "p": [
+     4,
+     47,
+     205
+    ]
+   },
+   "text": [
+    {
+     "role": "name",
+     "text": "ITOSHI RIN",
+     "box": [
+      320,
+      376,
+      761,
+      429
+     ],
+     "color": [
+      255,
+      255,
+      255
+     ]
+    },
+    {
+     "role": "sin",
+     "text": "GREED",
+     "box": [
+      285,
+      460,
+      804,
+      536
+     ],
+     "color": [
+      40,
+      110,
+      46
+     ]
+    },
+    {
+     "role": "name",
+     "text": "THE DESTROYER",
+     "box": [
+      195,
+      567,
+      816,
+      611
+     ],
+     "color": [
+      255,
+      255,
+      255
+     ]
+    }
+   ]
+  }
+ ]
+}

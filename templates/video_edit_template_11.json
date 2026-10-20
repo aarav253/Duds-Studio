@@ -1,0 +1,170 @@
+{
+ "name": "No perfect ___ / reveal at the drop (GBX7 CapCut edit)",
+ "engine": "reveal",
+ "reference": "references/template_11/reference.mp4",
+ "music": "music/template_11_ref.wav",
+ "size": [
+  1080,
+  1350
+ ],
+ "fps": 60,
+ "duration": 12.79,
+ "drop": 8.243,
+ "notes": "Measured from the reference (30fps, 1080x1080): ~115 BPM. Before the drop: 4-beat shots (action / held push-in / held pan), a 0.43s flash shot, then a build shot that brightens ~1.8x. At the drop the build shot turns near-grey (sat 13) for one beat while the caption flips; then one shot per beat, muted (sat 37 vs 77 before), each pulling back 2-4%. Song has a sung vocal chop 5.8-8.7s (not dialogue) - keep it. Cut times are snapped to the song's beat grid - the reference's own picture cuts run ~0.15 s ahead of its audio (its video/audio are slightly out of sync), so copying them made our cuts early. Caption flip/grey beat sits on the strongest hit (8.243 s, the 'boom' before the drop) - user felt the flip on the full drop was too late; Barou shots start when the music opens up (8.815 s).",
+ "shots": [
+  {
+   "a": 0.0,
+   "b": 2.635,
+   "role": "pre",
+   "motion": "action",
+   "zoom": [
+    1.0,
+    1.03
+   ]
+  },
+  {
+   "a": 2.635,
+   "b": 4.68,
+   "role": "pre",
+   "motion": "push",
+   "zoom": [
+    1.0,
+    1.044
+   ]
+  },
+  {
+   "a": 4.68,
+   "b": 6.755,
+   "role": "pre",
+   "motion": "pan",
+   "zoom": [
+    1.02,
+    1.03
+   ],
+   "pan": [
+    0.0,
+    -0.025
+   ]
+  },
+  {
+   "a": 6.755,
+   "b": 7.29,
+   "role": "pre",
+   "motion": "flash",
+   "zoom": [
+    1.06,
+    1.0
+   ]
+  },
+  {
+   "a": 7.29,
+   "b": 8.815,
+   "role": "build",
+   "motion": "push",
+   "zoom": [
+    1.0,
+    1.08
+   ],
+   "bright_from": 7.29,
+   "bright_to": 8.203,
+   "bright_gain": 1.75
+  },
+  {
+   "a": 8.815,
+   "b": 9.33,
+   "role": "post",
+   "zoom": [
+    1.035,
+    1.0
+   ]
+  },
+  {
+   "a": 9.33,
+   "b": 9.845,
+   "role": "post",
+   "zoom": [
+    1.03,
+    1.0
+   ]
+  },
+  {
+   "a": 9.845,
+   "b": 10.36,
+   "role": "post",
+   "zoom": [
+    1.04,
+    1.0
+   ]
+  },
+  {
+   "a": 10.36,
+   "b": 10.875,
+   "role": "post",
+   "zoom": [
+    1.035,
+    1.0
+   ]
+  },
+  {
+   "a": 10.875,
+   "b": 11.39,
+   "role": "post",
+   "zoom": [
+    1.03,
+    1.0
+   ]
+  },
+  {
+   "a": 11.39,
+   "b": 11.905,
+   "role": "post",
+   "zoom": [
+    1.045,
+    1.0
+   ]
+  },
+  {
+   "a": 11.905,
+   "b": 12.42,
+   "role": "post",
+   "zoom": [
+    1.02,
+    1.0
+   ]
+  },
+  {
+   "a": 12.42,
+   "b": 12.79,
+   "role": "post",
+   "zoom": [
+    1.02,
+    1.0
+   ]
+  }
+ ],
+ "grade": {
+  "pre_sat": 1.0,
+  "drop_sat": 0.18,
+  "post_sat": 0.5,
+  "post_lift": 1.12,
+  "post_warm": [
+   1.03,
+   0.99,
+   0.97
+  ]
+ },
+ "caption": {
+  "font": "C:/Windows/Fonts/arial.ttf",
+  "size": 58,
+  "y": 0.5,
+  "stroke": 3,
+  "line_gap": 1.02,
+  "pre": "“there’s no perfect\nstriker”",
+  "post": "brutal."
+ },
+ "beat": {
+  "t0": 0.06,
+  "period": 0.515
+ },
+ "bars": "bars start on beats k = 1, 5, 9 ... (0.575, 2.635, 4.695, 6.755, 8.815 ...): the song's phrase is one beat off a grid starting at 0.06"
+}

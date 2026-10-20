@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Duds Studio</title>
+<style>
+:root{--bg:#0e1015;--panel:#161a22;--panel2:#1d222c;--line:#2a303c;--text:#e8eaf0;--dim:#8a93a5;
+--accent:#5b8cff;--ok:#3ecf8e;--warn:#f5b84a;--bad:#f2685f;--pub:#e04545}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:14px/1.45 "Segoe UI",system-ui,sans-serif}
+header{display:flex;align-items:center;gap:18px;padding:12px 22px;border-bottom:1px solid var(--line);position:sticky;top:0;background:var(--bg);z-index:5}
+header h1{font-size:18px;margin:0}header h1 b{color:var(--accent)}
+nav button{background:none;border:0;color:var(--dim);font:inherit;padding:7px 12px;border-radius:7px;cursor:pointer}
+nav button.on{color:var(--text);background:var(--panel2)}
+#chans{margin-left:auto;font-size:12px;color:var(--dim)}
+main{padding:20px 22px;max-width:1400px;margin:0 auto}
+.row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.b{background:var(--panel2);color:var(--text);border:1px solid var(--line);padding:6px 11px;border-radius:7px;cursor:pointer;font:inherit;text-decoration:none;display:inline-block}
+.b:hover{border-color:#43495a}.b.pri{background:var(--accent);border-color:var(--accent);color:#fff}
+.b.pub{background:var(--pub);border-color:var(--pub);color:#fff;font-weight:600}.b:disabled{opacity:.4;cursor:default}
+input,select,textarea{background:var(--panel2);color:var(--text);border:1px solid var(--line);border-radius:7px;padding:6px 8px;font:inherit}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px;margin-top:14px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:11px;overflow:hidden;display:flex;flex-direction:column}
+.card video{width:100%;aspect-ratio:4/5;background:#000;display:block}
+.ph{aspect-ratio:4/5;display:flex;align-items:center;justify-content:center;color:var(--dim);background:#0a0b0e}
+.body{padding:11px 12px;display:flex;flex-direction:column;gap:7px}
+.title{font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pill{display:inline-block;font-size:11px;padding:1px 8px;border-radius:99px;border:1px solid currentColor;white-space:nowrap}
+.st-built{color:#7aa7ff}.st-uploaded_private{color:var(--warn)}.st-scheduled{color:#c08bff}.st-published{color:var(--ok)}
+.st-error{color:var(--bad)}.st-not{color:var(--dim)}
+.q-PASS{color:var(--ok)}.q-WARN{color:var(--warn)}.q-FAIL,.q-ERROR{color:var(--bad)}
+.small{font-size:12px;color:var(--dim)}.err{color:var(--bad);font-size:12px;white-space:pre-wrap}
+.qc{background:var(--panel2);border-radius:8px;padding:7px 9px;font-size:12px}
+.qc table{width:100%;border-collapse:collapse;margin-top:6px}.qc td{padding:2px 4px;border-top:1px solid var(--line);vertical-align:top}
+.box{background:var(--panel);border:1px solid var(--line);border-radius:11px;padding:14px;margin-bottom:16px}
+.split{display:grid;grid-template-columns:300px 1fr;gap:16px}
+.list{max-height:70vh;overflow:auto}.list button{display:block;width:100%;text-align:left;margin-bottom:4px}
+textarea.code{width:100%;min-height:62vh;font:12px/1.5 Consolas,monospace}
+.files{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:8px;margin-top:10px}
+.file{background:var(--panel2);border-radius:8px;padding:6px;font-size:11px;word-break:break-all}
+.file img,.file video{width:100%;aspect-ratio:1;object-fit:cover;border-radius:5px;background:#000}
+.crumbs a{color:var(--accent);cursor:pointer}
+.drop{border:2px dashed var(--line);border-radius:10px;padding:14px;text-align:center;color:var(--dim);margin-top:10px}
+.drop.over{border-color:var(--accent);color:var(--text)}
+table.stats{width:100%;border-collapse:collapse}table.stats th,table.stats td{padding:7px 9px;border-bottom:1px solid var(--line);text-align:left}
+table.stats th{color:var(--dim);font-weight:500;font-size:12px}td.n{text-align:right;font-variant-numeric:tabular-nums}
+.tiles{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:14px}.tile{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:10px 16px}
+.tile b{display:block;font-size:22px}
+#jobs{position:fixed;right:16px;bottom:16px;width:420px;max-height:50vh;overflow:auto;background:var(--panel);border:1px solid var(--line);border-radius:11px;font-size:12px;box-shadow:0 10px 30px #0009;display:none}
+#jobs .j{padding:7px 11px;border-bottom:1px solid var(--line);cursor:pointer}
+.bar{height:4px;background:var(--panel2);border-radius:2px;margin-top:4px}.bar i{display:block;height:100%;background:var(--accent);border-radius:2px}
+#log{white-space:pre-wrap;font:11px/1.4 Consolas,monospace;max-height:200px;overflow:auto;padding:8px 11px;background:#0a0b0e;display:none}
+</style></head><body>
+<header><h1><b>Duds</b> Studio</h1>
+<nav><button data-tab="videos" class="on">Videos</button><button data-tab="manifests">Manifests</button>
+<button data-tab="media">Media</button><button data-tab="stats">Stats</button></nav>
+<div id="chans"></div></header>
+<main>
+<div id="tab-videos">
+  <div class="row"><input id="q" placeholder="filter by name…" oninput="render()" style="width:220px">
+  <select id="fst" onchange="render()"><option value="">all statuses</option><option>not built</option><option>built</option>
+  <option>uploaded_private</option><option>scheduled</option><option>published</option><option>error</option></select>
+  <span class="small">Upload is always <b>private</b>. Only the red Publish button (or Schedule) releases a video.</span></div>
+  <div class="grid" id="videos"></div>
+</div>
+<div id="tab-manifests" hidden>
+  <div class="split"><div class="box"><div class="row" style="margin-bottom:8px"><input id="mq" placeholder="filter…" oninput="mlist()" style="flex:1"></div>
+    <div class="list" id="mlist"></div></div>
+  <div class="box"><div class="row" style="margin-bottom:8px"><b id="mname">Pick a manifest</b>
+    <button class="b pri" onclick="saveM(false)">Save</button>
+    <button class="b" onclick="newFrom()">New from this template</button>
+    <span id="mmsg" class="small"></span></div>
+    <textarea id="med" class="code" spellcheck="false" placeholder="Pick a manifest on the left. To make a new video, open a similar one, click 'New from this template', change the id and the clips, then Save."></textarea></div></div>
+</div>
+<div id="tab-media" hidden>
+  <div class="box"><div class="row"><div class="crumbs" id="crumbs"></div><span class="small" id="mcount"></span>
+  <span style="margin-left:auto"></span><input id="newdir" placeholder="new folder" style="width:140px"><button class="b" onclick="mkdir()" id="mkb">Create</button></div>
+  <div class="files" id="dirs"></div><div class="files" id="files"></div>
+  <div class="drop" id="drop">Drop clips, images or music here to add them to this folder (or click)</div></div>
+</div>
+<div id="tab-stats" hidden>
+  <div class="row" style="margin-bottom:12px"><button class="b pri" onclick="post('/api/stats',{})">Refresh from YouTube</button>
+  <button class="b" onclick="post('/api/stats',{detailed:true})">Refresh + retention</button>
+  <span class="small">Pulls view / like / comment counts with the YouTube Data API (and average-viewed % from the Analytics API).</span></div>
+  <div class="tiles" id="tiles"></div>
+  <div class="box"><table class="stats" id="stable"></table></div>
+</div>
+</main>
+<div id="jobs"><div id="jl"></div><div id="log"></div></div>
+<script>
+const TOKEN="__TOKEN__";let S={videos:[],channels:[],jobs:[]},openJob=null,cur=null,curPath='';
+const $=s=>document.querySelector(s),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+async function post(url,body,form){const o={method:'POST',headers:{'X-Duds-Token':TOKEN}};
+ if(form)o.body=body;else{o.headers['Content-Type']='application/json';o.body=JSON.stringify(body)}
+ const r=await fetch(url,o);let j={};try{j=await r.json()}catch(e){}
+ if(!r.ok){alert(j.error||('Request failed ('+r.status+')'));return null}
+ if(j.job){openJob=j.job;refresh()}return j}
+document.querySelectorAll('nav button').forEach(b=>b.onclick=()=>{document.querySelectorAll('nav button').forEach(x=>x.classList.toggle('on',x===b));
+ document.querySelectorAll('main>div').forEach(d=>d.hidden=d.id!=='tab-'+b.dataset.tab);
+ if(b.dataset.tab==='manifests')mlist();if(b.dataset.tab==='media')browse(curPath);if(b.dataset.tab==='stats')stats()});
+async function refresh(){S=await (await fetch('/api/state')).json();
+ $('#chans').innerHTML=S.channels.map(c=>`${esc(c.label)}: `+(c.authorized?'<span style="color:var(--ok)">connected</span>':
+  `<span style="color:var(--bad)">login expired</span> <button class="b" style="padding:2px 8px" onclick="post('/api/auth',{channel:'${c.id}'})">Log in</button>`)).join(' &nbsp;·&nbsp; ');
+ render();jobs();if(!$('#tab-stats').hidden)stats()}
+const chLabel=c=>(S.channels.find(x=>x.id===(c||''))||{}).label||c;
+function render(){const q=$('#q').value.toLowerCase(),f=$('#fst').value;
+ const vs=S.videos.filter(v=>(!q||(v.key+' '+v.title).toLowerCase().includes(q))&&(!f||v.status===f)).sort((a,b)=>Math.max(b.mtime,b.preview_mtime)-Math.max(a.mtime,a.preview_mtime));
+ $('#videos').innerHTML=vs.map(card).join('')||'<p class="small">nothing matches</p>'}
+function qcBlock(v){if(!v.qc)return v.output?`<div class="qc small">No QC yet <button class="b" onclick="post('/api/qc',{key:'${esc(v.key)}'})">Run QC</button></div>`:'';
+ const c=v.qc.counts||{},r=v.qc.report;
+ return `<div class="qc"><div class="row"><b>QC</b><span class="pill q-${esc(v.qc.overall)}">${esc(v.qc.overall)}</span>
+  <span class="small">PASS ${c.PASS??'-'} · WARN ${c.WARN??'-'} · FAIL ${c.FAIL??'-'}</span><span style="margin-left:auto"></span>
+  ${r?`<a class="small" href="#" onclick="qcShow(event,'${esc(v.key)}','${esc(r)}')">report</a>`:''}
+  <button class="b" style="padding:2px 8px" onclick="post('/api/qc',{key:'${esc(v.key)}'})">re-run</button></div><div id="qc-${esc(v.key)}"></div></div>`}
+async function qcShow(e,key,rep){e.preventDefault();const el=document.getElementById('qc-'+key);if(el.innerHTML){el.innerHTML='';return}
+ const r=await fetch(`/media/${encodeURI(rep)}/qc_report.json`);if(!r.ok){el.innerHTML='<div class="err">report file missing</div>';return}
+ const j=await r.json();const img=`/media/${encodeURI(rep)}/frames.png`;
+ el.innerHTML=`<table>${(j.items||[]).map(i=>`<tr><td class="q-${i.status}">${i.status}</td><td>${esc(i.section)}: ${esc(i.check)}<div class="small">${esc(i.detail)}</div></td></tr>`).join('')}</table>
+  <a href="${img}" target="_blank"><img src="${img}" style="width:100%;margin-top:6px;border-radius:5px" onerror="this.remove()"></a>`}
+function card(v){const k=esc(v.key),st=v.status,id=v.video_id;let b=[];
+ const src=v.output?`/media/${encodeURI(v.output)}?t=${v.mtime}`:v.preview?`/media/${encodeURI(v.preview)}?t=${v.preview_mtime}`:null;
+ b.push(`<button class="b" onclick="post('/api/build',{key:'${k}',preview:true})">Preview render</button>`);
+ b.push(`<button class="b" onclick="post('/api/build',{key:'${k}'})">${v.output?'Re-render':'Render'}</button>`);
+ if(v.output&&!id)b.push(`<select id="ch-${k}">${S.channels.filter(c=>c.authorized).map(c=>`<option value="${c.id}">${esc(c.label)}</option>`).join('')}</select>
+  <button class="b pri" onclick="post('/api/upload',{key:'${k}',channel:$('#ch-${k}').value})">Upload (private)</button>`);
+ if(id&&st!=='published'){b.push(`<button class="b pub" onclick="pub('${k}')">Publish…</button>`);
+  b.push(st==='scheduled'?`<button class="b" onclick="post('/api/unschedule',{key:'${k}'})">Unschedule</button>`:`<button class="b" onclick="sched('${k}')">Schedule…</button>`)}
+ if(id)b.push(`<a class="b" href="https://youtu.be/${esc(id)}" target="_blank" rel="noopener">YouTube ↗</a>`);
+ const s=v.stats?`<div class="small">▶ ${v.stats.views} views · ♥ ${v.stats.likes} · 💬 ${v.stats.comments}${v.detailed&&v.detailed.averageViewPercentage!=null?` · ${(+v.detailed.averageViewPercentage).toFixed(0)}% viewed`:''}</div>`:'';
+ return `<div class="card">${src?`<video src="${src}#t=0.5" controls preload="metadata"></video>`:'<div class="ph">not rendered yet</div>'}
+ <div class="body"><div class="title" title="${esc(v.title)}">${esc(v.title)}</div>
+ <div class="row"><span class="pill st-${esc(st.split(' ')[0])}">${esc(st)}</span><span class="small">${k} · ${esc(v.engine)}</span></div>
+ ${v.channel||id?`<div class="small">${esc(chLabel(v.channel))}${v.scheduled_for?` · goes public ${esc(v.scheduled_for.replace('T',' ').slice(0,16))}`:''}</div>`:''}
+ ${!v.output&&v.preview?'<div class="small">showing the half-res preview</div>':''}
+ ${v.output&&v.preview?`<div class="small"><a href="#" style="color:var(--accent)" onclick="swapSrc(event,this,'${encodeURI(v.preview)}?t=${v.preview_mtime}','${encodeURI(v.output)}?t=${v.mtime}')">watch the preview render</a></div>`:''}
+ ${v.error?`<div class="err">${esc(v.error)}</div>`:''}${qcBlock(v)}${s}<div class="row">${b.join('')}</div></div></div>`}
+function swapSrc(e,a,pv,full){e.preventDefault();const vid=a.closest('.card').querySelector('video');const toPv=a.textContent.includes('preview');
+ vid.src='/media/'+(toPv?pv:full)+'#t=0.5';vid.play();a.textContent=toPv?'watch the full render':'watch the preview render'}
+function pub(k){const w=prompt(`Make "${k}" PUBLIC on YouTube right now?\n\nEveryone will be able to see it. Type PUBLISH to confirm.`);
+ if(w==='PUBLISH')post('/api/publish',{key:k,confirm:'PUBLISH'});else if(w!==null)alert('Not published (you must type PUBLISH).')}
+function sched(k){const d=new Date();d.setHours(19,0,0,0);if(d<new Date())d.setDate(d.getDate()+1);
+ const def=new Date(d-d.getTimezoneOffset()*6e4).toISOString().slice(0,16);
+ const w=prompt(`Schedule "${k}" to go public at (your local time, YYYY-MM-DDTHH:MM):`,def);if(w)post('/api/schedule',{key:k,when:w})}
+function jobs(){const js=S.jobs||[];$('#jobs').style.display=js.length?'block':'none';
+ $('#jl').innerHTML=js.map(j=>{const t=j.started?Math.round(((j.ended||Date.now()/1000)-j.started))+'s':'';
+  return `<div class="j" onclick="openJob='${j.id}';log()"><span class="pill ${j.status==='error'?'q-FAIL':j.status==='done'?'q-PASS':'st-built'}">${j.status}</span> ${esc(j.name)} <span class="small">${t}</span>
+  ${j.status==='running'&&j.progress!=null?`<div class="bar"><i style="width:${Math.round(j.progress*100)}%"></i></div>`:''}
+  ${j.status==='error'?`<div class="err">${esc(j.result)}</div>`:''}</div>`}).join('');log()}
+async function log(){if(!openJob)return;const j=await (await fetch('/api/job/'+openJob)).json();const el=$('#log');el.style.display='block';
+ el.textContent=`[${j.name}] ${j.status}\n`+j.log.slice(-5000);el.scrollTop=el.scrollHeight}
+setInterval(()=>{if((S.jobs||[]).some(j=>j.status==='running'||j.status==='queued'))refresh()},2000);
+// ---------- manifests
+function mlist(){const q=($('#mq').value||'').toLowerCase();
+ $('#mlist').innerHTML=S.videos.filter(v=>!q||v.key.includes(q)).map(v=>`<button class="b" onclick="openM('${esc(v.key)}')">${esc(v.key)} <span class="small">${esc(v.engine)}</span></button>`).join('')}
+async function openM(k){cur=k;$('#mname').textContent=k+'.json';$('#med').value=await (await fetch('/api/manifest/'+encodeURIComponent(k))).text();$('#mmsg').textContent=''}
+function newFrom(){if(!cur)return alert('Open a manifest to use as the template first');const id=prompt('New video id (letters, numbers, _ ):',cur+'_v2');if(!id)return;
+ try{const m=JSON.parse($('#med').value);m.id=id;$('#med').value=JSON.stringify(m,null,1);cur=null;$('#mname').textContent=id+'.json (new, unsaved)'}catch(e){alert('The editor has invalid JSON: '+e)}}
+async function saveM(){const r=await post('/api/manifest',{content:$('#med').value,original:cur,new:cur===null});
+ if(r){$('#mmsg').innerHTML=`saved ${esc(r.id)} · engine ${esc(r.engine)}`+(r.missing.length?` · <span class="err">${r.missing.length} missing file(s): ${esc(r.missing.slice(0,3).join(', '))}</span>`:' · all referenced files exist');
+  cur=r.id;$('#mname').textContent=r.id+'.json';await refresh();mlist()}}
+// ---------- media
+async function browse(p){curPath=p;const j=await (await fetch('/api/browse?path='+encodeURIComponent(p))).json();
+ const parts=p?p.split('/'):[];$('#crumbs').innerHTML=`<a onclick="browse('')">media</a>`+parts.map((x,i)=>` / <a onclick="browse('${esc(parts.slice(0,i+1).join('/'))}')">${esc(x)}</a>`).join('');
+ $('#mcount').textContent=j.files.length?`${j.total} file(s)${j.total>j.files.length?', showing '+j.files.length:''}`:'';
+ $('#dirs').innerHTML=j.dirs.map(d=>`<div class="file" style="cursor:pointer" onclick="browse('${esc(p?p+'/'+d:d)}')">📁 ${esc(d)}</div>`).join('');
+ $('#files').innerHTML=j.files.map(f=>{const u='/media/'+encodeURI(f.path);return `<div class="file" title="${esc(f.path)}">${f.kind==='image'?`<img src="${u}" loading="lazy">`:
+  f.kind==='video'?`<video src="${u}#t=0.3" preload="none" muted onmouseover="this.play()" onmouseout="this.pause()"></video>`:`<audio src="${u}" controls preload="none" style="width:100%"></audio>`}<div>${esc(f.name)}</div></div>`}).join('');
+ $('#drop').style.display=j.writable?'block':'none';$('#mkb').disabled=!j.writable;$('#newdir').disabled=!j.writable}
+async function addFiles(files){const fd=new FormData();fd.append('path',curPath);[...files].forEach(f=>fd.append('files',f));
+ const r=await post('/api/media/upload',fd,true);if(r){if(r.skipped.length)alert('Skipped (not a clip/image/audio file): '+r.skipped.join(', '));browse(curPath)}}
+async function mkdir(){const n=$('#newdir').value.trim();if(n&&await post('/api/media/mkdir',{path:curPath,name:n})){$('#newdir').value='';browse(curPath)}}
+const dz=$('#drop');dz.ondragover=e=>{e.preventDefault();dz.classList.add('over')};dz.ondragleave=()=>dz.classList.remove('over');
+dz.ondrop=e=>{e.preventDefault();dz.classList.remove('over');if(e.dataTransfer.files.length)addFiles(e.dataTransfer.files)};
+dz.onclick=()=>{const i=document.createElement('input');i.type='file';i.multiple=true;i.onchange=()=>addFiles(i.files);i.click()};
+// ---------- stats
+function stats(){const up=S.videos.filter(v=>v.video_id).sort((a,b)=>(b.stats?.views||0)-(a.stats?.views||0));
+ const tot=up.reduce((a,v)=>a+(v.stats?.views||0),0),likes=up.reduce((a,v)=>a+(v.stats?.likes||0),0);
+ const fetched=up.map(v=>v.stats?.fetched_at).filter(Boolean).sort().pop();
+ $('#tiles').innerHTML=`<div class="tile"><span class="small">uploaded videos</span><b>${up.length}</b></div><div class="tile"><span class="small">published</span><b>${up.filter(v=>v.status==='published').length}</b></div>
+  <div class="tile"><span class="small">total views</span><b>${tot}</b></div><div class="tile"><span class="small">total likes</span><b>${likes}</b></div>
+  <div class="tile"><span class="small">last refreshed</span><b style="font-size:15px">${esc((fetched||'never').replace('T',' '))}</b></div>`;
+ $('#stable').innerHTML=`<tr><th>Video</th><th>Channel</th><th>Status</th><th>Goes / went public</th><th class="n">Views</th><th class="n">Likes</th><th class="n">Comments</th><th class="n">Avg viewed</th></tr>`+
+  up.map(v=>`<tr><td><a style="color:var(--text)" href="https://youtu.be/${esc(v.video_id)}" target="_blank" rel="noopener">${esc(v.title)}</a></td><td>${esc(chLabel(v.channel))}</td>
+  <td><span class="pill st-${esc(v.status)}">${esc(v.status)}</span></td><td class="small">${esc((v.scheduled_for||'').replace('T',' ').slice(0,16))}</td>
+  <td class="n">${v.stats?.views??'–'}</td><td class="n">${v.stats?.likes??'–'}</td><td class="n">${v.stats?.comments??'–'}</td>
+  <td class="n">${v.detailed&&v.detailed.averageViewPercentage!=null?(+v.detailed.averageViewPercentage).toFixed(0)+'%':'–'}</td></tr>`).join('')}
+refresh();
+</script></body></html>
